@@ -1,0 +1,152 @@
+\IEEEoverridecommandlockouts  
+\overrideIEEEmargins  
+
+% Because IEEE template is dumb
+\let\proof\relax
+\let\endproof\relax
+
+% Load in math related packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{derivative}
+\usepackage{xcolor}
+\usepackage{bm}
+
+% Load in bib related packages
+\usepackage[noadjust]{cite}
+\usepackage{url}
+
+% Figure-related packages
+\usepackage{graphicx}
+\usepackage[export]{adjustbox} % For aligning figures
+\graphicspath{{figures/}}
+
+% Create theorem-like environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+
+% Create definition-like environments
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{remark}{Remark}
+\newtheorem{problem}{Problem}
+\newtheorem{property}{Property}
+\newtheorem{example}{Example}
+\newtheorem{step}{Step}
+
+% Create custom math commands
+\newcommand{\argmin}{\operatornamewithlimits{arg\,min}}
+\newcommand{\argmax}{\operatornamewithlimits{arg\,max}}
+\newcommand{\hcat}{\operatorname{hcat}}
+\newcommand{\subjectto}{\operatorname{subject~to}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\T}{^\top}
+\newcommand{\KL}{\mathcal{KL}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\Kinf}{\mathcal{K}_{\infty}}
+\newcommand{\relu}{\operatorname{ReLU}}
+
+%%% Bold math shortcuts (if you're into that kind of thing)
+
+% Bold numbers
+\newcommand{\bzero}{\mathbf{0}}
+\newcommand{\bone}{\mathbf{1}}
+
+% Bold lowercase letters
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\be}{\mathbf{e}}
+\renewcommand{\bf}{\mathbf{f}} % NOTE: use \textbf if you really want to write bold non-math text.
+\newcommand{\bg}{\mathbf{g}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\bl}{\mathbf{l}}
+\newcommand{\bmm}{\mathbf{m}} % NOTE: \bm conflicts with the command for bold greek letters.
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\bo}{\mathbf{o}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bt}{\mathbf{t}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bz}{\mathbf{z}}
+
+% Bold uppercase letters
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+% Bold greek letters, not used super often
+\newcommand{\balpha}{\bm{\alpha}}
+\newcommand{\bbeta}{\bm{\beta}}
+\newcommand{\bgamma}{\bm{\gamma}}
+\newcommand{\bdelta}{\bm{\delta}} 
+\newcommand{\btheta}{\bm{\theta}}
+\newcommand{\bxi}{\bm{\xi}}
+\newcommand{\bpi}{\bm{\pi}}
+\newcommand{\bphi}{\bm{\phi}}
+\newcommand{\bvarphi}{\bm{\varphi}}
+\newcommand{\bGamma}{\bm{\Gamma}}
+\newcommand{\bzeta}{\bm{\zeta}}
+
+% Manifold stuff
+\newcommand{\Q}{\mathcal{Q}}
+\newcommand{\Tq}{T_{\bq}\Q}
+\newcommand{\TQ}{T\Q}
+
+% Bold hat symbols and such (looks a little weird without these adjustments.
+\newcommand{\bhat}[1]{\skew{3}{\hat}{\bm{#1}}}
+\newcommand{\bdothat}[1]{\skew{3}{\dot}{\skew{3}{\hat}{\bm{#1}}}}
+\newcommand{\btilde}[1]{\skew{3}{\tilde}{\bm{#1}}}
+\newcommand{\bdotilde}[1]{\skew{3}{\dot}{\skew{3}{\tilde}{\bm{#1}}}}
+
+% Define some colors I like to use
+\usepackage{xcolor}
+\definecolor{myblue}{RGB}{49, 114, 174}
+\definecolor{myred}{rgb}{0.796, 0.235, 0.2}
+\definecolor{mygreen}{rgb}{0.22, 0.596, 0.149}
+\definecolor{mypurple}{rgb}{0.584,0.345,0.698}
+
+% Blindtext
+\usepackage{blindtext}
